@@ -16,7 +16,7 @@ function searchMovie() {
                     $("#movie-list").append(
                         `
                         <div class="col-12 col-md-4">
-                            <div class="card mb-3">
+                            <div class="card shadow border-0 mb-5">
                                 <img src="` +
                             data.Poster +
                             `" class="card-img-top" alt="...">
@@ -27,7 +27,7 @@ function searchMovie() {
                                     <h6 class="card-subtitle mb-2 text-body-secondary">` +
                             data.Year +
                             `</h6>
-                                    <a href="#" class="card-link see-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id=` +
+                                    <a href="#" class="btn btn-dark w-100 mt-3 see-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id=` +
                             data.imdbID +
                             `>Detail</a>
                                 </div>
@@ -83,29 +83,44 @@ $("#movie-list").on("click", ".see-detail", function () {
                         <div class="col-md-8">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    ` +
+                                <div class="row">
+                                    <div class="col-2"><span class="fw-semibold">Title </span></div>
+                                    <div class="col-10">: ` +
                         movie.Title +
-                        `
+                        `</div>
+                                </div>                                    
                                 </li>
-                                 <li class="list-group-item">Released: 
-                                    ` +
+                                <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-2"><span class="fw-semibold">Released </span></div>
+                                    <div class="col-10">: ` +
                         movie.Released +
-                        `
+                        `</div>
+                                </div>  
                                 </li>
-                                 <li class="list-group-item">Genre:
-                                    ` +
+                                <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-2"><span class="fw-semibold">Genre </span></div>
+                                    <div class="col-10">: ` +
                         movie.Genre +
-                        `
+                        `</div>
+                                </div>  
                                 </li>
-                                 <li class="list-group-item">Director:
-                                    ` +
+                                <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-2"><span class="fw-semibold">Director </span></div>
+                                    <div class="col-10">: ` +
                         movie.Director +
-                        `
+                        `</div>
+                                </div>  
                                 </li>
-                                 <li class="list-group-item">Actor:
-                                    ` +
+                                <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-2"><span class="fw-semibold">Actor </span></div>
+                                    <div class="col-10">: ` +
                         movie.Actors +
-                        `
+                        `</div>
+                                </div>  
                                 </li>
                             </ul>
                         </div>
