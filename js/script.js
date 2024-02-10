@@ -37,7 +37,7 @@ function searchMovie() {
                     );
                 });
 
-                $("#search-input").val("");
+                // $("#search-input").val("");
             } else {
                 $("#movie-list").html(
                     `<h3 class="text-center fst-italic text-danger">` +
