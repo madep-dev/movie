@@ -6,7 +6,7 @@ function searchMovie() {
         dataType: "json",
         data: {
             apikey: "4ec4954d",
-            s: $("#search-input").val(),
+            s: $("#search-input").val().append("/"),
         },
         success: function (result) {
             if (result.Response == "True") {
